@@ -1,0 +1,8 @@
+.pokemon-list-container {
+  width: 70%;
+}
+@media (max-width: 640px) {
+  .pokemon-list-container {
+    width: 100%;
+  }
+}

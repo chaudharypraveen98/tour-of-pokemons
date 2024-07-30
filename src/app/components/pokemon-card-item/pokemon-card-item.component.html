@@ -1,0 +1,22 @@
+<p-card
+  [header]="pokemon.name | uppercase"
+  [subheader]="'#' + pokemon.slug"
+  [style]="{ width: '240px', margin: '10px' }"
+>
+  <img
+    alt="Card"
+    [src]="
+      'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/' +
+      pokemon.slug +
+      '.png'
+    "
+    width="240"
+    height="240"
+  />
+
+  <div class="flex gap-3">
+    <a [routerLink]="['/pokemon', pokemon.name]">
+      <p-button label="View More" class="w-full" styleClass="w-full" />
+    </a>
+  </div>
+</p-card>

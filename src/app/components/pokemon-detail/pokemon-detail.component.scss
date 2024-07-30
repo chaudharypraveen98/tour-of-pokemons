@@ -1,0 +1,27 @@
+.pokemon-detail-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.stats-container {
+  min-width: 25%;
+}
+.image-title-container {
+  min-width: 15%;
+}
+.pokemon-title {
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .pokemon-detail-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .stats-container {
+    min-width: 100%;
+  }
+  .image-title-container {
+    min-width: 100%;
+  }
+}

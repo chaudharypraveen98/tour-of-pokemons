@@ -1,0 +1,38 @@
+<p-dataView
+  #dv
+  [value]="pokemons"
+  [layout]="layout"
+  class="margin-v-20 margin-100 width:50%"
+>
+  <ng-template pTemplate="header">
+    <div class="flex justify-content-end">
+      <p-dataViewLayoutOptions />
+    </div>
+  </ng-template>
+  <ng-template pTemplate="list" let-products>
+    <div class="flex flex-center">
+      <div class="grid grid-nogutter pokemon-list-container">
+        <div
+          class="col-12 w-full"
+          *ngFor="let pokemon of pokemons; let first = first"
+        >
+          <app-pokemon-list-item [pokemon]="pokemon"></app-pokemon-list-item>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template let-product pTemplate="grid" let-products class="w-full">
+    <div class="w-full flex flex-wrap flex-space-between">
+      <app-pokemon-card-item
+        *ngFor="let pokemon of pokemons"
+        [pokemon]="pokemon"
+      ></app-pokemon-card-item>
+    </div>
+  </ng-template>
+</p-dataView>
+<p-paginator
+  (onPageChange)="onPageChange($event)"
+  [rows]="limit"
+  [totalRecords]="1000"
+  [rowsPerPageOptions]="[5, 10, 20]"
+/>

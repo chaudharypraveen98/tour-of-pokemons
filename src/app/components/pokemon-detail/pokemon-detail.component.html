@@ -1,0 +1,43 @@
+<div class="flex margin-100 min-h-100vh flex-column">
+  <h1 class="pokemon-title">{{ pokemon.name | uppercase }}</h1>
+  <div class="pokemon-detail-container">
+    <div class="flex flex-column image-title-container">
+      <img
+        [src]="pokemon?.sprites?.other.home.front_default"
+        height="250"
+        width="250"
+        class="w-full card-box-shadow"
+      />
+    </div>
+    <div>
+      <p><b>Base Experience :-</b> {{ pokemon.base_experience }}</p>
+      <p><b>Height :-</b>{{ pokemon.height }}</p>
+      <p><b>WT (hectograms) :- </b> {{ pokemon.weight }}</p>
+      <div class="flex flex-row flex-align-center">
+        <p><b>Type :-</b></p>
+        <p-tag
+          *ngFor="let typeItem of pokemon.types"
+          [value]="typeItem.type.name"
+          [style]="getTypeStyle(typeItem.type.name)"
+          [rounded]="true"
+        >
+        </p-tag>
+      </div>
+
+      <!-- <ul>
+      <li *ngFor="let abilityItem of pokemon.abilities">
+        {{ abilityItem.ability.name }}
+      </li>
+    </ul> -->
+    </div>
+    <div class="stats-container">
+      <h3>Stats :-</h3>
+      <!-- <ul> -->
+      <div *ngFor="let statItem of pokemon.stats" class="mt-10">
+        <span>{{ statItem.stat.name | titlecase }} </span>
+        <p-progressBar [value]="statItem.base_stat" />
+      </div>
+      <!-- </ul> -->
+    </div>
+  </div>
+</div>

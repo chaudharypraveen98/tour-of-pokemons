@@ -1,0 +1,36 @@
+.about-us-container {
+  margin: 100px 30px 30px 30px;
+}
+header {
+  background: #ffcb05;
+  color: #3c1053;
+  padding: 10px 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+.team-section,
+.contact-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.team-member {
+  margin-bottom: 15px;
+}
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 15px;
+}

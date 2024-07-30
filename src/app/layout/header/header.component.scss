@@ -1,0 +1,8 @@
+.header-fix {
+  position: fixed;
+  background-color: var(--bg-color);
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  padding: 0 10px;
+}

@@ -1,0 +1,17 @@
+<div>
+  <p-sidebar [(visible)]="sidebarVisible">
+    <h3>Tour of Pokemons</h3>
+    <a routerLink="/"><p>Home</p></a>
+    <a routerLink="/about-us"><p>About Us</p></a>
+  </p-sidebar>
+
+  <div class="flex flex-align-center flex-row border-bottom header-fix">
+    <p-button (onClick)="sidebarVisible = true" icon="pi pi-bars" />
+
+    <a routerLink="/" class="flex-center flex-1">
+      <img src="logo.png" height="100" width="100" alt="logo" />
+      <h1>Tour of Pokemons</h1>
+    </a>
+    <app-search-bar />
+  </div>
+</div>
